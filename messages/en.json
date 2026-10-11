@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Mohamed Khalil Brik — Web Development & E-Commerce",
+    "description": "Freelance web developer building fast, bold websites and online stores."
+  },
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "wordmark": "Mohamed Khalil Brik",
+    "tagline": "Web Development · E-Commerce",
+    "thesis": "Web development and online stores, built like they matter.",
+    "scrollCue": "Enter the gallery",
+    "viewWork": "View my work",
+    "portraitPlaceholder": "This frame is reserved for a portrait — coming soon."
+  },
+  "portfolio": {
+    "heading": "Selected work",
+    "placeholderTitle": "Project title",
+    "placeholderDescription": "This frame is reserved for a future project — coming soon.",
+    "viewProject": "View live site",
+    "meta": {
+      "role": "Role",
+      "stack": "Stack",
+      "year": "Year"
+    }
+  },
+  "services": {
+    "heading": "What I build",
+    "web": {
+      "title": "Web development",
+      "description": "Custom websites built from scratch — fast, accessible, and made to last."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Online stores that make it easy for people to browse, trust, and buy."
+    }
+  },
+  "about": {
+    "heading": "About",
+    "bio": "Computer engineer pursuing a dual M.Sc. in Complex Systems Engineering and Computer Engineering (Erasmus Mundus EMSSE, Université de Technologie de Compiègne & University of Genova), after a B.Sc. in Computer Science from The American University in Cairo (Dean's List, 3.6/4.0). Engineering experience spans Ernst & Young's technology practice, Abu Dhabi Islamic Bank's AI and security team, and a production NLP chatbot still serving 1,000+ users today. I bring that same engineering rigor to every website and online store I build — Django, FastAPI, React, and Node.js are daily tools, not a sideline skill."
+  },
+  "guestbook": {
+    "heading": "Let's talk",
+    "subtext": "Tell me about your project, or book a call directly.",
+    "bookCall": "Book a call",
+    "bookCallNote": "Calendly link coming soon",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

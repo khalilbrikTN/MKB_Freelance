@@ -36,6 +36,18 @@ yarn-error.log*
 # vercel
 .vercel
 
+# AI tooling — local dev aids, not site source (84MB+ of vendored
+# binaries/scripts across 4 duplicate harness installs)
+/.agent/
+/.claude/
+/.cursor/
+/.gemini/
+/.impeccable/
+
+# raw project screenshots dropped here as a staging area; the real
+# assets this site uses live in public/projects/
+/projects/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

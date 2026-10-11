@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Gallery Opening — near-white walls, warm track-light glow, one
+     saturated accent per piece. Color commits at section scale, not
+     as trim: see each .room's --accent. */
+  --wall: #f5f4f1;
+  --wall-dim: #ebe9e4;
+  --ink: #17140f;
+  --ink-soft: #4a453d;
+  --track-light: #e8a33d;
+
+  /* Darkened past their first-pick saturated hues so near-white room
+     text clears 4.5:1 against every one of them. */
+  --accent-1: #c23a14;
+  --accent-2: #1e4fd8;
+  --accent-3: #136b43;
+  --accent-4: #b81f5c;
+  --accent-5: #8c5f10;
+
+  --accent-active: var(--accent-1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-wall: var(--wall);
+  --color-wall-dim: var(--wall-dim);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-track-light: var(--track-light);
+  --color-accent-active: var(--accent-active);
+  --font-display: var(--font-syne);
+  --font-body: var(--font-inter);
+  --font-label: var(--font-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: color-mix(in srgb, var(--ink) 12%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--wall);
+  color: var(--ink);
+  font-family: var(--font-body);
+  transition: background-color 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::selection {
+  background: var(--accent-active);
+  color: var(--wall);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-active);
+  outline-offset: 3px;
+}
+
+/* scrollbar theming (webkit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--wall-dim);
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent-active) 55%, var(--ink) 20%);
+  border-radius: 999px;
+}
+
+@keyframes scrollcue {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 0.8;
+  }
+}
+
+/* Opening-night entrance: the hero's one rehearsed focal sequence, played
+   once on load — houselights (glow), then the artist's portrait, then the
+   wordmark, then the rest, each element settling before the next begins. */
+@keyframes gallery-glow-bloom {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    /* Settles at the element's own resting opacity (--glow-opacity), not a
+       hardcoded 1 — otherwise every glow ends up stuck at full strength. */
+    opacity: var(--glow-opacity, 1);
+    transform: scale(1);
+  }
+}
+
+@keyframes gallery-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.entrance-glow {
+  animation: gallery-glow-bloom 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.entrance-rise {
+  opacity: 0;
+  animation: gallery-rise 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--entrance-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entrance-glow,
+  .entrance-rise {
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+    transform: none;
+  }
 }

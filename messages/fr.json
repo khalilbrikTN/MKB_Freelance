@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Mohamed Khalil Brik — Développement web & e-commerce",
+    "description": "Développeur web freelance, sites et boutiques en ligne rapides et audacieux."
+  },
+  "nav": {
+    "work": "Travaux",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "wordmark": "Mohamed Khalil Brik",
+    "tagline": "Développement web · E-commerce",
+    "thesis": "Développement web et boutiques en ligne, conçus pour durer.",
+    "scrollCue": "Entrer dans la galerie",
+    "viewWork": "Voir mes projets",
+    "portraitPlaceholder": "Ce cadre est réservé à un portrait — bientôt disponible."
+  },
+  "portfolio": {
+    "heading": "Projets sélectionnés",
+    "placeholderTitle": "Titre du projet",
+    "placeholderDescription": "Ce cadre est réservé à un futur projet — bientôt disponible.",
+    "viewProject": "Voir le site en ligne",
+    "meta": {
+      "role": "Rôle",
+      "stack": "Technologies",
+      "year": "Année"
+    }
+  },
+  "services": {
+    "heading": "Ce que je construis",
+    "web": {
+      "title": "Développement web",
+      "description": "Des sites web sur mesure, conçus de zéro — rapides, accessibles et faits pour durer."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Des boutiques en ligne qui donnent envie de parcourir, de faire confiance et d'acheter."
+    }
+  },
+  "about": {
+    "heading": "À propos",
+    "bio": "Ingénieur informaticien, actuellement en double master en Ingénierie des Systèmes Complexes et Ingénierie Informatique (programme Erasmus Mundus EMSSE, Université de Technologie de Compiègne et Université de Gênes), après une licence en informatique à l'Université américaine du Caire (tableau d'honneur, 3.6/4.0). Expérience professionnelle chez Ernst & Young (practice technologique), à la Abu Dhabi Islamic Bank (IA et sécurité), et développement d'un chatbot NLP en production qui sert encore aujourd'hui plus de 1 000 utilisateurs. J'apporte cette même rigueur d'ingénieur à chaque site web et boutique en ligne que je réalise : Django, FastAPI, React et Node.js sont des outils du quotidien, pas une compétence secondaire."
+  },
+  "guestbook": {
+    "heading": "Discutons",
+    "subtext": "Parlez-moi de votre projet, ou réservez directement un appel.",
+    "bookCall": "Réserver un appel",
+    "bookCallNote": "Lien Calendly à venir",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "send": "Envoyer"
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}

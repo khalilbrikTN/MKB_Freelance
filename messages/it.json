@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Mohamed Khalil Brik — Sviluppo web & e-commerce",
+    "description": "Sviluppatore web freelance: siti e negozi online veloci e audaci."
+  },
+  "nav": {
+    "work": "Progetti",
+    "services": "Servizi",
+    "about": "Chi sono",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "wordmark": "Mohamed Khalil Brik",
+    "tagline": "Sviluppo Web · E-Commerce",
+    "thesis": "Sviluppo web e negozi online, costruiti per durare.",
+    "scrollCue": "Entra nella galleria",
+    "viewWork": "Vedi i miei progetti",
+    "portraitPlaceholder": "Questa cornice è riservata a un ritratto — prossimamente."
+  },
+  "portfolio": {
+    "heading": "Progetti selezionati",
+    "placeholderTitle": "Titolo del progetto",
+    "placeholderDescription": "Questa cornice è riservata a un progetto futuro — prossimamente.",
+    "viewProject": "Vedi il sito live",
+    "meta": {
+      "role": "Ruolo",
+      "stack": "Stack",
+      "year": "Anno"
+    }
+  },
+  "services": {
+    "heading": "Cosa realizzo",
+    "web": {
+      "title": "Sviluppo web",
+      "description": "Siti web su misura costruiti da zero — veloci, accessibili e fatti per durare."
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Negozi online che rendono facile navigare, fidarsi e acquistare."
+    }
+  },
+  "about": {
+    "heading": "Chi sono",
+    "bio": "Ingegnere informatico, attualmente impegnato in un doppio master in Ingegneria dei Sistemi Complessi e Ingegneria Informatica (programma Erasmus Mundus EMSSE, Université de Technologie de Compiègne e Università di Genova), dopo una laurea in Informatica alla American University in Cairo (lode accademica, 3.6/4.0). Esperienza professionale in Ernst & Young (area tecnologica), presso la Abu Dhabi Islamic Bank (IA e sicurezza), e sviluppo di un chatbot NLP in produzione che serve ancora oggi oltre 1.000 utenti. Porto lo stesso rigore ingegneristico in ogni sito web e negozio online che realizzo: Django, FastAPI, React e Node.js sono strumenti quotidiani, non una competenza secondaria."
+  },
+  "guestbook": {
+    "heading": "Parliamone",
+    "subtext": "Raccontami il tuo progetto, oppure prenota direttamente una chiamata.",
+    "bookCall": "Prenota una chiamata",
+    "bookCallNote": "Link Calendly in arrivo",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "message": "Messaggio",
+      "send": "Invia"
+    }
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati."
+  }
+}
