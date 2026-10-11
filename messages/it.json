@@ -83,6 +83,13 @@
         ],
         "cta": "Parliamo del progetto"
       }
+    },
+    "perMonth": "/mese",
+    "maintenance": {
+      "label": "Opzione aggiuntiva",
+      "name": "Manutenzione continua",
+      "description": "Aggiornamenti di sicurezza, piccole modifiche ai contenuti, monitoraggio dell'uptime e assistenza prioritaria — per mantenere il sito veloce, sicuro e aggiornato dopo il lancio.",
+      "note": "Aggiungibile a qualsiasi pacchetto · annullabile in qualsiasi momento"
     }
   },
   "about": {

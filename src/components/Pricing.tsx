@@ -1,4 +1,4 @@
-import { pricingTiers } from "@/data/pricing";
+import { pricingTiers, maintenancePrice } from "@/data/pricing";
 
 export function Pricing({
   heading,
@@ -8,6 +8,11 @@ export function Pricing({
   priceSuffix,
   customLabel,
   tiers,
+  maintenanceLabel,
+  maintenanceName,
+  maintenanceDescription,
+  maintenanceNote,
+  perMonth,
 }: {
   heading: string;
   subtext: string;
@@ -19,6 +24,11 @@ export function Pricing({
     "starter" | "pro" | "custom",
     { name: string; description: string; features: string[]; cta: string }
   >;
+  maintenanceLabel: string;
+  maintenanceName: string;
+  maintenanceDescription: string;
+  maintenanceNote: string;
+  perMonth: string;
 }) {
   return (
     <section id="pricing" className="mx-auto max-w-5xl px-6 pt-12 pb-20 sm:pt-16 sm:pb-28">
@@ -94,6 +104,33 @@ export function Pricing({
             </div>
           );
         })}
+      </div>
+
+      {/* Optional recurring add-on — deliberately kept outside the 3-column
+          comparison (not a 4th competing tier) as a lighter, single row. */}
+      <div className="mt-6 flex flex-col gap-6 rounded-sm border border-ink/10 p-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+        <div>
+          <span className="font-label text-xs uppercase tracking-[0.2em] text-ink-soft">
+            {maintenanceLabel}
+          </span>
+          <h3 className="mt-2 font-display text-xl font-bold">{maintenanceName}</h3>
+          <p className="mt-2 max-w-md text-sm text-ink-soft">
+            {maintenanceDescription}
+          </p>
+        </div>
+        <div className="flex shrink-0 flex-col items-start gap-2 sm:items-end">
+          <div className="flex items-baseline gap-1">
+            <span className="font-display text-3xl font-bold">
+              €{maintenancePrice}
+            </span>
+            <span className="font-label text-xs uppercase tracking-[0.1em] text-ink-soft">
+              {perMonth}
+            </span>
+          </div>
+          <span className="font-label text-xs uppercase tracking-[0.15em] text-ink-soft">
+            {maintenanceNote}
+          </span>
+        </div>
       </div>
 
       <p className="mt-6 font-label text-xs uppercase tracking-[0.15em] text-ink-soft">

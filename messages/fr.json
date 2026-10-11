@@ -83,6 +83,13 @@
         ],
         "cta": "Discuter du projet"
       }
+    },
+    "perMonth": "/mois",
+    "maintenance": {
+      "label": "Option supplémentaire",
+      "name": "Maintenance continue",
+      "description": "Mises à jour de sécurité, petites modifications de contenu, surveillance de la disponibilité et support prioritaire — pour que votre site reste rapide, sûr et à jour après sa mise en ligne.",
+      "note": "À ajouter à n'importe quel pack · résiliable à tout moment"
     }
   },
   "about": {

@@ -11,3 +11,7 @@ export const pricingTiers: PricingTier[] = [
   { id: "pro", price: 950, highlighted: true },
   { id: "custom", price: null, highlighted: false },
 ];
+
+// Optional recurring add-on, independent of the one-time tiers above —
+// same starting-point caveat as the tier prices.
+export const maintenancePrice = 40;

@@ -91,6 +91,11 @@ export default async function Home() {
               cta: tPricing("tiers.custom.cta"),
             },
           }}
+          maintenanceLabel={tPricing("maintenance.label")}
+          maintenanceName={tPricing("maintenance.name")}
+          maintenanceDescription={tPricing("maintenance.description")}
+          maintenanceNote={tPricing("maintenance.note")}
+          perMonth={tPricing("perMonth")}
         />
         <About heading={tAbout("heading")} bio={tAbout("bio")} isPlaceholder={false} />
       </main>

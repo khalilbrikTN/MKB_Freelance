@@ -83,6 +83,13 @@
         ],
         "cta": "Discuss your project"
       }
+    },
+    "perMonth": "/month",
+    "maintenance": {
+      "label": "Optional add-on",
+      "name": "Ongoing Maintenance",
+      "description": "Security updates, small content changes, uptime monitoring, and priority support — so your site stays fast, safe, and current after launch.",
+      "note": "Add to any package · cancel anytime"
     }
   },
   "about": {
