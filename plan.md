@@ -39,20 +39,22 @@ Personal site to win new freelance clients by showcasing past web projects and m
 4. Revisit custom domain later if desired
 
 ## Status
-Home page built and shipped (Impeccable "Gallery Opening" direction — see DESIGN.md). Live locally at `localhost:3000/en` (`/fr`, `/it`). 3/3 project slots filled with real content: Jin Restaurant, SAIN, Au Vieux Strasbourg. Bio written from resume. Contact room fully wired (Calendly, email, LinkedIn, form). Still not deployed.
+Home page built and shipped (Impeccable "Gallery Opening" direction — see DESIGN.md). Code pushed to GitHub: https://github.com/khalilbrikTN/MKB_Freelance (public). Vercel import in progress. 3/3 project slots filled with real content: Jin Restaurant, SAIN, Au Vieux Strasbourg. Bio written from resume. Contact room fully wired (Calendly, email, LinkedIn, form). Pricing section added (3 tiers, EUR).
 
 ## Open Items / Info Still Needed
 - [x] Calendly booking URL — wired in `src/components/Guestbook.tsx`
 - [x] Contact email (`mohamedkhalil.brik@aucegypt.edu`) + LinkedIn — wired in `src/components/Guestbook.tsx`
 - [x] 3 real projects with live links + screenshots (Jin Restaurant, SAIN, Au Vieux Strasbourg) — room for 1-2 more if desired
 - [x] Bio/About Me copy (from resume, all 3 locales)
+- [x] Pushed to GitHub (public repo)
+- [x] Services & pricing — 3-tier pricing section added (`src/data/pricing.ts`): Starter €450, Pro €950, Custom/E-commerce quote-based. **These are Claude-suggested starting numbers for the European market, not numbers you gave — review and adjust in `src/data/pricing.ts` before treating them as final.**
 - [ ] Project stack/year details (optional — currently only "role" is filled in per project)
-- [ ] Services & pricing details (packages vs hourly, rough rates) — currently just lists the two service types, no pricing
 - [ ] Testimonials — section intentionally omitted until real quotes exist
 - [ ] Resume/CV file (PDF) to link
 - [ ] Reaction to the "Gallery Opening" visual direction already shipped (see screenshots / live preview)
 
 ## Next Steps
-1. Push to GitHub, connect to Vercel, deploy to a free subdomain
-2. Add pricing to Services, and a resume download, when ready
+1. Finish Vercel import (vercel.com/new → import MKB_Freelance → Deploy)
+2. Review/adjust the suggested pricing numbers
 3. Add testimonials once real ones exist
+4. Add resume download when ready

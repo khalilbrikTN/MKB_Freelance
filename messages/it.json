@@ -6,6 +6,7 @@
   "nav": {
     "work": "Progetti",
     "services": "Servizi",
+    "pricing": "Tariffe",
     "about": "Chi sono",
     "contact": "Contatti"
   },
@@ -37,6 +38,51 @@
     "ecommerce": {
       "title": "E-commerce",
       "description": "Negozi online che rendono facile navigare, fidarsi e acquistare."
+    }
+  },
+  "pricing": {
+    "heading": "Tariffe",
+    "subtext": "Pacchetti chiari per permettere a ogni attività di avere una presenza professionale online.",
+    "priceSuffix": "pagamento unico",
+    "customLabel": "Preventivo su misura",
+    "mostPopular": "Il più scelto",
+    "disclaimer": "Prezzi di partenza — l'ambito e il costo definitivi vengono confermati dopo una breve chiamata.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "Un sito semplice e professionale per essere online.",
+        "features": [
+          "Sito di una o più pagine",
+          "Design moderno e responsive",
+          "Costruito mobile-first",
+          "Contatti e social",
+          "SEO di base"
+        ],
+        "cta": "Inizia"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Un sito più completo, pensato per convertire, curato nei dettagli.",
+        "features": [
+          "Tutto il pacchetto Starter",
+          "Più sezioni",
+          "Animazioni e interazioni su misura",
+          "Modulo di contatto con invio via email",
+          "Configurazione multilingue (EN/FR/IT+)"
+        ],
+        "cta": "Inizia"
+      },
+      "custom": {
+        "name": "Su misura / E-commerce",
+        "description": "Per negozi online e progetti che richiedono una soluzione pensata su misura.",
+        "features": [
+          "Funzionalità e-commerce",
+          "Funzionalità personalizzate",
+          "Design su misura",
+          "Soluzione adattata alle tue esigenze"
+        ],
+        "cta": "Parliamo del progetto"
+      }
     }
   },
   "about": {

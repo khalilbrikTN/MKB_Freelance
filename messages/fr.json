@@ -6,6 +6,7 @@
   "nav": {
     "work": "Travaux",
     "services": "Services",
+    "pricing": "Tarifs",
     "about": "À propos",
     "contact": "Contact"
   },
@@ -37,6 +38,51 @@
     "ecommerce": {
       "title": "E-commerce",
       "description": "Des boutiques en ligne qui donnent envie de parcourir, de faire confiance et d'acheter."
+    }
+  },
+  "pricing": {
+    "heading": "Tarifs",
+    "subtext": "Des forfaits clairs pour que chaque activité ait une présence professionnelle en ligne.",
+    "priceSuffix": "paiement unique",
+    "customLabel": "Sur devis",
+    "mostPopular": "Le plus choisi",
+    "disclaimer": "Tarifs de départ — le périmètre et le coût définitifs sont confirmés après un appel rapide.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "Un site simple et professionnel pour exister en ligne.",
+        "features": [
+          "Site d'une ou plusieurs pages",
+          "Design moderne et responsive",
+          "Conçu mobile d'abord",
+          "Coordonnées & réseaux sociaux",
+          "SEO de base"
+        ],
+        "cta": "Commencer"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Un site plus complet, pensé pour convertir, avec le soin du détail.",
+        "features": [
+          "Tout le pack Starter",
+          "Plusieurs sections",
+          "Animations et interactions sur mesure",
+          "Formulaire de contact avec envoi par e-mail",
+          "Configuration multilingue (EN/FR/IT+)"
+        ],
+        "cta": "Commencer"
+      },
+      "custom": {
+        "name": "Sur mesure / E-commerce",
+        "description": "Pour les boutiques en ligne et les projets qui demandent une solution pensée pour eux.",
+        "features": [
+          "Fonctionnalités de boutique en ligne",
+          "Fonctionnalités personnalisées",
+          "Design sur mesure",
+          "Adapté à vos besoins spécifiques"
+        ],
+        "cta": "Discuter du projet"
+      }
     }
   },
   "about": {

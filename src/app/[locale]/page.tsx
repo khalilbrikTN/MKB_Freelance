@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Portfolio } from "@/components/Portfolio";
 import { Services } from "@/components/Services";
+import { Pricing } from "@/components/Pricing";
 import { About } from "@/components/About";
 import { Guestbook } from "@/components/Guestbook";
 import { Footer } from "@/components/Footer";
@@ -13,6 +14,7 @@ export default async function Home() {
   const tHero = await getTranslations("hero");
   const tPortfolio = await getTranslations("portfolio");
   const tServices = await getTranslations("services");
+  const tPricing = await getTranslations("pricing");
   const tAbout = await getTranslations("about");
   const tGuestbook = await getTranslations("guestbook");
   const tFooter = await getTranslations("footer");
@@ -24,6 +26,7 @@ export default async function Home() {
         links={[
           { href: "#work", label: tNav("work") },
           { href: "#services", label: tNav("services") },
+          { href: "#pricing", label: tNav("pricing") },
           { href: "#about", label: tNav("about") },
           { href: "#contact", label: tNav("contact") },
         ]}
@@ -60,6 +63,34 @@ export default async function Home() {
               description: tServices("ecommerce.description"),
             },
           ]}
+        />
+        <Pricing
+          heading={tPricing("heading")}
+          subtext={tPricing("subtext")}
+          disclaimer={tPricing("disclaimer")}
+          mostPopularLabel={tPricing("mostPopular")}
+          priceSuffix={tPricing("priceSuffix")}
+          customLabel={tPricing("customLabel")}
+          tiers={{
+            starter: {
+              name: tPricing("tiers.starter.name"),
+              description: tPricing("tiers.starter.description"),
+              features: tPricing.raw("tiers.starter.features"),
+              cta: tPricing("tiers.starter.cta"),
+            },
+            pro: {
+              name: tPricing("tiers.pro.name"),
+              description: tPricing("tiers.pro.description"),
+              features: tPricing.raw("tiers.pro.features"),
+              cta: tPricing("tiers.pro.cta"),
+            },
+            custom: {
+              name: tPricing("tiers.custom.name"),
+              description: tPricing("tiers.custom.description"),
+              features: tPricing.raw("tiers.custom.features"),
+              cta: tPricing("tiers.custom.cta"),
+            },
+          }}
         />
         <About heading={tAbout("heading")} bio={tAbout("bio")} isPlaceholder={false} />
       </main>

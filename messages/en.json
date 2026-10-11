@@ -6,6 +6,7 @@
   "nav": {
     "work": "Work",
     "services": "Services",
+    "pricing": "Pricing",
     "about": "About",
     "contact": "Contact"
   },
@@ -37,6 +38,51 @@
     "ecommerce": {
       "title": "E-commerce",
       "description": "Online stores that make it easy for people to browse, trust, and buy."
+    }
+  },
+  "pricing": {
+    "heading": "Pricing",
+    "subtext": "Straightforward packages so any business can have a professional site online.",
+    "priceSuffix": "one-time",
+    "customLabel": "Custom quote",
+    "mostPopular": "Most booked",
+    "disclaimer": "Starting prices — final scope and cost confirmed after a quick call.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "A simple, professional site to establish your presence online.",
+        "features": [
+          "Single-page or few-page site",
+          "Modern, responsive design",
+          "Mobile-first build",
+          "Contact info & social links",
+          "Basic on-page SEO"
+        ],
+        "cta": "Get started"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "A fuller site built to convert, with the details that make it feel considered.",
+        "features": [
+          "Everything in Starter",
+          "Multiple sections",
+          "Custom animations & interactions",
+          "Contact form with email delivery",
+          "Multilingual setup (EN/FR/IT+)"
+        ],
+        "cta": "Get started"
+      },
+      "custom": {
+        "name": "Custom / E-commerce",
+        "description": "For online stores and projects that need something built around them.",
+        "features": [
+          "Online store functionality",
+          "Custom features for your project",
+          "Bespoke design",
+          "Scoped to your specific needs"
+        ],
+        "cta": "Discuss your project"
+      }
     }
   },
   "about": {
