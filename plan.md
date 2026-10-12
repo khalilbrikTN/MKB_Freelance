@@ -43,7 +43,7 @@ Personal site to win new freelance clients by showcasing past web projects and m
 4. Revisit custom domain later if desired
 
 ## Status
-Home page built and shipped (Impeccable "Gallery Opening" direction — see DESIGN.md). Code pushed to GitHub: https://github.com/khalilbrikTN/MKB_Freelance (public). Vercel import in progress. 6/6 project slots filled with real content: Jin Restaurant, SAIN, Au Vieux Strasbourg, Liberating Knowledge, InvoiceIQ, LMS (Teacher & Student Portal — 6-screenshot carousel with arrows + auto-advance). Bio written from resume. Contact room fully wired (Calendly, email, LinkedIn, working form backend via Resend). Pricing section added (3 tiers, EUR, + optional €40/mo maintenance). Real portrait added to hero. Services expanded to 6 items (web dev, e-commerce, accounting software, AI automations, CRM, HR systems). Floating WhatsApp button (+39 352 228 2361) added site-wide. Palette extended to 6 accent colors (added Deep Teal).
+Home page built and shipped (Impeccable "Gallery Opening" direction — see DESIGN.md). Code pushed to GitHub: https://github.com/khalilbrikTN/MKB_Freelance (public). Vercel import in progress. 7/7 project slots filled with real content: Jin Restaurant, SAIN, Au Vieux Strasbourg, Liberating Knowledge, InvoiceIQ, LMS (Teacher & Student Portal — 6-screenshot carousel with arrows + auto-advance), Düm / From U Menighin (neighborhood bar, Genoa). Bio written from resume. Contact room fully wired (Calendly, email, LinkedIn, working form backend via Resend). Pricing section added (3 tiers, EUR, + optional €40/mo maintenance). Real portrait added to hero. Services expanded to 6 items (web dev, e-commerce, accounting software, AI automations, CRM, HR systems). Floating WhatsApp button (+39 352 228 2361) added site-wide. Palette extended to 7 accent colors (added Deep Teal, Indigo Velvet).
 
 ## Open Items / Info Still Needed
 - [x] Calendly booking URL — wired in `src/components/Guestbook.tsx`
@@ -54,6 +54,7 @@ Home page built and shipped (Impeccable "Gallery Opening" direction — see DESI
 - [x] Services & pricing — 3-tier pricing section added (`src/data/pricing.ts`): Starter €450, Pro €950, Custom/E-commerce quote-based. **These are Claude-suggested starting numbers for the European market, not numbers you gave — review and adjust in `src/data/pricing.ts` before treating them as final.**
 - [x] Contact form actually sends email (Resend, verified working)
 - [x] InvoiceIQ + LMS projects added (no live links — internal/product builds)
+- [x] Düm / From U Menighin project added (live link: https://bar-da-u-menighin.vercel.app/)
 - [x] WhatsApp floating button
 - [ ] Project stack/year details (optional — currently only "role" is filled in per project)
 - [ ] Testimonials — section intentionally omitted until real quotes exist

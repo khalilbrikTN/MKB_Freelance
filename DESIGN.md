@@ -12,6 +12,8 @@ colors:
   deep-emerald: "#136b43"
   magenta-placard: "#b81f5c"
   bronze-ochre: "#8c5f10"
+  deep-teal: "#0f6b66"
+  indigo-velvet: "#4d1782"
 typography:
   display:
     fontFamily: "Syne, system-ui, sans-serif"
@@ -89,7 +91,7 @@ This world was chosen explicitly against three anti-references: the generic SaaS
 
 ## Colors
 
-Near-white gallery neutrals carry the frame; six darkened saturated hues each commit to one full project room; warm amber is reserved for ambient glow only.
+Near-white gallery neutrals carry the frame; seven darkened saturated hues each commit to one full project room; warm amber is reserved for ambient glow only.
 
 ### Primary
 - **Catalog Vermillion** (#c23a14): Room 1 accent — full-bleed section background behind the first framed project.
@@ -97,7 +99,8 @@ Near-white gallery neutrals carry the frame; six darkened saturated hues each co
 - **Deep Emerald** (#136b43): Room 3 accent — full-bleed section background.
 - **Magenta Placard** (#b81f5c): Room 4 accent — full-bleed section background.
 - **Bronze Ochre** (#8c5f10): Room 5 accent — full-bleed section background.
-- **Deep Teal** (#0f6b66): Room 6 accent (reserved in the token scale for additional project rooms).
+- **Deep Teal** (#0f6b66): Room 6 accent — full-bleed section background.
+- **Indigo Velvet** (#4d1782): Room 7 accent — full-bleed section background.
 
 ### Neutral
 - **Gallery Wall** (#f5f4f1): Primary page background; also the framed-piece matte behind each project screenshot.

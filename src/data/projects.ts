@@ -2,7 +2,7 @@ export type ProjectImage = { src: string; width: number; height: number };
 
 export type Project = {
   slug: string;
-  accent: `--accent-${1 | 2 | 3 | 4 | 5 | 6}`;
+  accent: `--accent-${1 | 2 | 3 | 4 | 5 | 6 | 7}`;
   title: string | null;
   description: string | null;
   role: string | null;
@@ -105,5 +105,17 @@ export const projects: Project[] = [
       { src: "/projects/lms-5.png", width: 1903, height: 898 },
       { src: "/projects/lms-6.png", width: 1916, height: 896 },
     ],
+  },
+  {
+    slug: "u-menighin",
+    accent: "--accent-7",
+    title: "Düm — From U Menighin",
+    description:
+      "Website for a neighborhood bar and cafeteria in Genoa, Italy, open since 1956 — menu, private events, and gallery, in Italian and English.",
+    role: "Design & Development",
+    stack: null,
+    year: null,
+    href: "https://bar-da-u-menighin.vercel.app/",
+    images: [{ src: "/projects/u-menighin.png", width: 1899, height: 897 }],
   },
 ];
