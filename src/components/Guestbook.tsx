@@ -1,7 +1,11 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { CALENDLY_URL, CONTACT_EMAIL, LINKEDIN_URL } from "@/data/contact";
+
+const DRAFT_KEY = "guestbook-draft";
+
+type Status = "idle" | "sending" | "success" | "error";
 
 export function Guestbook({
   heading,
@@ -12,6 +16,9 @@ export function Guestbook({
   emailLabel,
   messageLabel,
   sendLabel,
+  sendingLabel,
+  successMessage,
+  errorMessage,
 }: {
   heading: string;
   subtext: string;
@@ -21,16 +28,67 @@ export function Guestbook({
   emailLabel: string;
   messageLabel: string;
   sendLabel: string;
+  sendingLabel: string;
+  successMessage: string;
+  errorMessage: string;
 }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  // Restore an in-progress draft once on mount (a refresh or accidental
+  // navigation shouldn't silently wipe what someone was writing). This is
+  // the standard hydration-safe pattern for client-only storage: reading
+  // localStorage during the initial render would mismatch the server-
+  // rendered (empty) markup, so it has to happen in an effect instead.
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(DRAFT_KEY);
+      if (!raw) return;
+      const draft = JSON.parse(raw) as Partial<Record<"name" | "email" | "message", string>>;
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (draft.name) setName(draft.name);
+      if (draft.email) setEmail(draft.email);
+      if (draft.message) setMessage(draft.message);
+    } catch {
+      // Corrupt or inaccessible storage — proceed with an empty form.
+    }
+  }, []);
+
+  useEffect(() => {
+    if (status === "success") return;
+    try {
+      window.localStorage.setItem(DRAFT_KEY, JSON.stringify({ name, email, message }));
+    } catch {
+      // Storage unavailable (private browsing, quota) — draft safety is a
+      // nicety, not a requirement, so fail silently.
+    }
+  }, [name, email, message, status]);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const subject = encodeURIComponent(`New project inquiry from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setStatus("sending");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      if (!response.ok) throw new Error("send-failed");
+
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+      try {
+        window.localStorage.removeItem(DRAFT_KEY);
+      } catch {
+        // Ignore — nothing to clean up if storage was never written.
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -90,7 +148,8 @@ export function Guestbook({
               type="text"
               value={name}
               onChange={(event) => setName(event.target.value)}
-              className="rounded-lg border border-wall/30 bg-wall/5 px-4 py-3 text-wall outline-none transition-colors focus:border-wall/60"
+              disabled={status === "sending"}
+              className="rounded-lg border border-wall/30 bg-wall/5 px-4 py-3 text-base text-wall outline-none transition-colors focus:border-wall/60 disabled:opacity-60"
             />
           </label>
 
@@ -103,7 +162,8 @@ export function Guestbook({
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
-              className="rounded-lg border border-wall/30 bg-wall/5 px-4 py-3 text-wall outline-none transition-colors focus:border-wall/60"
+              disabled={status === "sending"}
+              className="rounded-lg border border-wall/30 bg-wall/5 px-4 py-3 text-base text-wall outline-none transition-colors focus:border-wall/60 disabled:opacity-60"
             />
           </label>
 
@@ -116,16 +176,31 @@ export function Guestbook({
               rows={4}
               value={message}
               onChange={(event) => setMessage(event.target.value)}
-              className="rounded-lg border border-wall/30 bg-wall/5 px-4 py-3 text-wall outline-none transition-colors focus:border-wall/60"
+              disabled={status === "sending"}
+              className="rounded-lg border border-wall/30 bg-wall/5 px-4 py-3 text-base text-wall outline-none transition-colors focus:border-wall/60 disabled:opacity-60"
             />
           </label>
 
           <button
             type="submit"
-            className="inline-flex w-fit items-center gap-2 rounded-full border border-wall/30 px-6 py-3 text-sm font-medium text-wall transition-colors hover:border-wall sm:col-span-2"
+            disabled={status === "sending"}
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-wall/30 px-6 py-3 text-sm font-medium text-wall transition-colors hover:border-wall disabled:opacity-60 sm:col-span-2"
           >
-            {sendLabel}
+            {status === "sending" ? sendingLabel : sendLabel}
           </button>
+
+          <div role="status" aria-live="polite" className="sm:col-span-2">
+            {status === "success" && (
+              <p className="font-label text-xs uppercase tracking-[0.15em] text-wall/80">
+                {successMessage}
+              </p>
+            )}
+            {status === "error" && (
+              <p className="font-label text-xs uppercase tracking-[0.15em] text-wall/80">
+                {errorMessage}
+              </p>
+            )}
+          </div>
         </form>
       </div>
     </section>

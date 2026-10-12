@@ -9,6 +9,8 @@ export function Portfolio({
   stackLabel,
   yearLabel,
   viewLabel,
+  prevLabel,
+  nextLabel,
 }: {
   heading: string;
   placeholderTitle: string;
@@ -17,6 +19,8 @@ export function Portfolio({
   stackLabel: string;
   yearLabel: string;
   viewLabel: string;
+  prevLabel: string;
+  nextLabel: string;
 }) {
   return (
     <section id="work" aria-label={heading}>
@@ -33,6 +37,8 @@ export function Portfolio({
           stackLabel={stackLabel}
           yearLabel={yearLabel}
           viewLabel={viewLabel}
+          prevLabel={prevLabel}
+          nextLabel={nextLabel}
         />
       ))}
     </section>

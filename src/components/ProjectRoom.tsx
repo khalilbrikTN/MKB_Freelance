@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Project } from "@/data/projects";
+import { ProjectCarousel } from "@/components/ProjectCarousel";
 
 export function ProjectRoom({
   project,
@@ -11,6 +12,8 @@ export function ProjectRoom({
   stackLabel,
   yearLabel,
   viewLabel,
+  prevLabel,
+  nextLabel,
 }: {
   project: Project;
   index: number;
@@ -21,10 +24,13 @@ export function ProjectRoom({
   stackLabel: string;
   yearLabel: string;
   viewLabel: string;
+  prevLabel: string;
+  nextLabel: string;
 }) {
   const isPlaceholder = !project.title;
   const title = project.title ?? placeholderTitle;
   const description = project.description ?? placeholderDescription;
+  const hasMultipleImages = project.images.length > 1;
 
   return (
     <section
@@ -38,17 +44,26 @@ export function ProjectRoom({
         {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
       </span>
 
-      {project.image && (
-        <div className="w-full max-w-4xl rounded-sm bg-wall p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.45)] sm:p-3">
-          <Image
-            src={project.image.src}
-            alt={title}
-            width={project.image.width}
-            height={project.image.height}
-            className="h-auto w-full rounded-[1px]"
-            sizes="(min-width: 896px) 56rem, 100vw"
-            priority={index === 0}
-          />
+      {project.images.length > 0 && (
+        <div className="w-full max-w-4xl overflow-hidden rounded-sm bg-wall p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.45)] sm:p-3">
+          {hasMultipleImages ? (
+            <ProjectCarousel
+              images={project.images}
+              alt={title}
+              prevLabel={prevLabel}
+              nextLabel={nextLabel}
+            />
+          ) : (
+            <Image
+              src={project.images[0].src}
+              alt={title}
+              width={project.images[0].width}
+              height={project.images[0].height}
+              className="h-auto w-full rounded-[1px]"
+              sizes="(min-width: 896px) 56rem, 100vw"
+              priority={index === 0}
+            />
+          )}
         </div>
       )}
 

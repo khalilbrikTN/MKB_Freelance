@@ -17,6 +17,7 @@
   --accent-3: #136b43;
   --accent-4: #b81f5c;
   --accent-5: #8c5f10;
+  --accent-6: #0f6b66;
 
   --accent-active: var(--accent-1);
 }
@@ -84,11 +85,13 @@ body {
 
 /* Opening-night entrance: the hero's one rehearsed focal sequence, played
    once on load — houselights (glow), then the artist's portrait, then the
-   wordmark, then the rest, each element settling before the next begins. */
+   wordmark, then the rest, each element settling before the next begins.
+   The track lights then keep a slow, continuous breathe once the house
+   has come up — real gallery lighting is never perfectly static. */
 @keyframes gallery-glow-bloom {
   from {
     opacity: 0;
-    transform: scale(0.85);
+    transform: scale(0.8);
   }
   to {
     /* Settles at the element's own resting opacity (--glow-opacity), not a
@@ -98,25 +101,46 @@ body {
   }
 }
 
+@keyframes gallery-glow-breathe {
+  0%,
+  100% {
+    opacity: var(--glow-opacity, 1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: calc(var(--glow-opacity, 1) * 1.3);
+    transform: scale(1.1);
+  }
+}
+
 @keyframes gallery-rise {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(34px) scale(0.97);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 .entrance-glow {
-  animation: gallery-glow-bloom 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  /* Wrapped in its own parallax div (see HeroCursorGlow), so this keeps
+     owning position/scale/opacity and never touches translate. */
+  animation:
+    gallery-glow-bloom 900ms cubic-bezier(0.16, 1, 0.3, 1) both,
+    gallery-glow-breathe 9s ease-in-out 900ms infinite;
 }
 
 .entrance-rise {
   opacity: 0;
-  animation: gallery-rise 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: gallery-rise 750ms cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: var(--entrance-delay, 0ms);
+}
+
+.hero-glow-parallax {
+  translate: var(--glow-shift-x, 0px) var(--glow-shift-y, 0px);
+  transition: translate 700ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -124,6 +148,12 @@ body {
   .entrance-rise {
     animation-duration: 1ms;
     animation-delay: 0ms;
+    animation-iteration-count: 1;
     transform: none;
+  }
+
+  .hero-glow-parallax {
+    translate: none;
+    transition: none;
   }
 }

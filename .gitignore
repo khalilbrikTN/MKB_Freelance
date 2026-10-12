@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -47,6 +48,10 @@ yarn-error.log*
 # raw project screenshots dropped here as a staging area; the real
 # assets this site uses live in public/projects/
 /projects/
+
+# raw portrait source dropped at the root; the real copy the site
+# uses lives at public/portrait.jpeg
+/me.jpeg
 
 # typescript
 *.tsbuildinfo

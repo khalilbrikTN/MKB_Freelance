@@ -3,6 +3,9 @@
     "title": "Mohamed Khalil Brik — Web Development & E-Commerce",
     "description": "Freelance web developer building fast, bold websites and online stores."
   },
+  "whatsapp": {
+    "label": "Chat on WhatsApp"
+  },
   "nav": {
     "work": "Work",
     "services": "Services",
@@ -16,13 +19,15 @@
     "thesis": "Web development and online stores, built like they matter.",
     "scrollCue": "Enter the gallery",
     "viewWork": "View my work",
-    "portraitPlaceholder": "This frame is reserved for a portrait — coming soon."
+    "credential": "Dual M.Sc. Computer Engineering — Erasmus Mundus"
   },
   "portfolio": {
     "heading": "Selected work",
     "placeholderTitle": "Project title",
     "placeholderDescription": "This frame is reserved for a future project — coming soon.",
     "viewProject": "View live site",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
     "meta": {
       "role": "Role",
       "stack": "Stack",
@@ -38,6 +43,22 @@
     "ecommerce": {
       "title": "E-commerce",
       "description": "Online stores that make it easy for people to browse, trust, and buy."
+    },
+    "accounting": {
+      "title": "Accounting software",
+      "description": "Custom accounting and invoicing tools built around how your business actually works."
+    },
+    "aiAutomation": {
+      "title": "AI automations",
+      "description": "AI-powered automations that cut out repetitive work — from data entry to customer responses."
+    },
+    "crm": {
+      "title": "CRM systems",
+      "description": "Custom CRM systems to track leads, clients, and deals in one place."
+    },
+    "hr": {
+      "title": "HR systems",
+      "description": "HR and team-management tools for scheduling, records, and internal workflows."
     }
   },
   "pricing": {
@@ -105,7 +126,10 @@
       "name": "Name",
       "email": "Email",
       "message": "Message",
-      "send": "Send"
+      "send": "Send",
+      "sending": "Sending…",
+      "success": "Thanks — I'll get back to you soon.",
+      "error": "Something went wrong sending that — please email me directly instead."
     }
   },
   "footer": {

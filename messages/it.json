@@ -3,6 +3,9 @@
     "title": "Mohamed Khalil Brik — Sviluppo web & e-commerce",
     "description": "Sviluppatore web freelance: siti e negozi online veloci e audaci."
   },
+  "whatsapp": {
+    "label": "Scrivimi su WhatsApp"
+  },
   "nav": {
     "work": "Progetti",
     "services": "Servizi",
@@ -16,13 +19,15 @@
     "thesis": "Sviluppo web e negozi online, costruiti per durare.",
     "scrollCue": "Entra nella galleria",
     "viewWork": "Vedi i miei progetti",
-    "portraitPlaceholder": "Questa cornice è riservata a un ritratto — prossimamente."
+    "credential": "Doppio master in ingegneria informatica — Erasmus Mundus"
   },
   "portfolio": {
     "heading": "Progetti selezionati",
     "placeholderTitle": "Titolo del progetto",
     "placeholderDescription": "Questa cornice è riservata a un progetto futuro — prossimamente.",
     "viewProject": "Vedi il sito live",
+    "previousImage": "Immagine precedente",
+    "nextImage": "Immagine successiva",
     "meta": {
       "role": "Ruolo",
       "stack": "Stack",
@@ -38,6 +43,22 @@
     "ecommerce": {
       "title": "E-commerce",
       "description": "Negozi online che rendono facile navigare, fidarsi e acquistare."
+    },
+    "accounting": {
+      "title": "Software di contabilità",
+      "description": "Strumenti di contabilità e fatturazione su misura, costruiti sul modo in cui lavora davvero la tua azienda."
+    },
+    "aiAutomation": {
+      "title": "Automazioni IA",
+      "description": "Automazioni basate sull'IA che eliminano il lavoro ripetitivo — dall'inserimento dati alle risposte ai clienti."
+    },
+    "crm": {
+      "title": "Sistemi CRM",
+      "description": "CRM su misura per tenere traccia di contatti, clienti e trattative in un unico posto."
+    },
+    "hr": {
+      "title": "Sistemi HR",
+      "description": "Strumenti HR e di gestione del team per turni, archivi e processi interni."
     }
   },
   "pricing": {
@@ -105,7 +126,10 @@
       "name": "Nome",
       "email": "Email",
       "message": "Messaggio",
-      "send": "Invia"
+      "send": "Invia",
+      "sending": "Invio in corso…",
+      "success": "Grazie — ti risponderò al più presto.",
+      "error": "Si è verificato un problema nell'invio — scrivimi direttamente via email."
     }
   },
   "footer": {

@@ -89,14 +89,15 @@ This world was chosen explicitly against three anti-references: the generic SaaS
 
 ## Colors
 
-Near-white gallery neutrals carry the frame; five darkened saturated hues each commit to one full project room; warm amber is reserved for ambient glow only.
+Near-white gallery neutrals carry the frame; six darkened saturated hues each commit to one full project room; warm amber is reserved for ambient glow only.
 
 ### Primary
 - **Catalog Vermillion** (#c23a14): Room 1 accent — full-bleed section background behind the first framed project.
 - **Cobalt Frame** (#1e4fd8): Room 2 accent — full-bleed section background.
 - **Deep Emerald** (#136b43): Room 3 accent — full-bleed section background.
-- **Magenta Placard** (#b81f5c): Room 4 accent (reserved in the token scale for additional project rooms).
-- **Bronze Ochre** (#8c5f10): Room 5 accent (reserved in the token scale for additional project rooms).
+- **Magenta Placard** (#b81f5c): Room 4 accent — full-bleed section background.
+- **Bronze Ochre** (#8c5f10): Room 5 accent — full-bleed section background.
+- **Deep Teal** (#0f6b66): Room 6 accent (reserved in the token scale for additional project rooms).
 
 ### Neutral
 - **Gallery Wall** (#f5f4f1): Primary page background; also the framed-piece matte behind each project screenshot.
@@ -182,6 +183,9 @@ Mostly soft, restrained radii and hairline borders; no sharp rectangles, no heav
 ### Project Room (signature component)
 The defining custom pattern: a `min-h-screen` section whose entire background is one saturated accent (`style={{ backgroundColor: var(--accent-N) }}`), carrying a sequence badge ("01 / 03" in Plex Mono), a white-matte framed screenshot with the one deliberate drop shadow when real project content exists, or a dashed-border empty frame plus placeholder copy when it doesn't, a placard `<dl>` of role/stack/year in Plex Mono, and a pill CTA to the live site. Each room sets `data-accent-room="--accent-N"`, which `ScrollAccentWatcher`'s `IntersectionObserver` reads to update `--accent-active` on `<html>` as the room crosses the viewport center — the single interaction that threads every room's color into the page's global chrome (selection, focus ring, scrollbar thumb, Guestbook CTA fill).
 
+### Project Carousel
+When a project has more than one screenshot, the framed-screenshot slot (`ProjectRoom.tsx`) swaps its single `<Image>` for `ProjectCarousel.tsx` instead of changing the frame itself — same white matte, same shadow, same position in the room. Inside: a fixed `aspect-[19/9]` stage with `object-cover` so slides of differing aspect ratios never shift the frame's height, two drawn chevron-arrow buttons (44px+ targets, never emoji/unicode), and a Plex Mono `N / total` counter — the same placard-counting language as the room sequence badge, one level down. Auto-advances every 5s, pauses on hover or keyboard focus, stops entirely off-screen or under `prefers-reduced-motion`; the arrows always work regardless of pause state.
+
 ## Do's and Don'ts
 
 ### Do:
@@ -196,3 +200,7 @@ The defining custom pattern: a `min-h-screen` section whose entire background is
 - **Don't** use Track-Light Amber as a flat fill, text color, or button background — it is reserved for the ambient hero glow only.
 - **Don't** add a skeleton loader for unfilled content; use the dashed empty-frame treatment instead.
 - **Don't** introduce a purple-gradient or dark-mode-developer-portfolio treatment anywhere in the system — both are confirmed anti-references for this world.
+
+### Named exceptions (not drift):
+- **WhatsApp brand green** (`#25D366`, `WhatsAppButton.tsx`): outside the accent palette on purpose. A third-party contact affordance like this is only trustworthy/recognizable in its own brand color; recoloring it to fit the gallery world would work against the one job the button has.
+- **WhatsApp button shadow** (`0 6px 20px -4px rgba(0,0,0,0.4)`, same file): a second shadow value, smaller and tighter than the framed-screenshot shadow. The existing shadow was sized for a large image and looks wrong scaled down onto a 56px floating control; this one is proportioned for it instead. Still exactly one shadow for images, one for this button — not an open shadow system.

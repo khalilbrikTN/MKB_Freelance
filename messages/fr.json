@@ -3,6 +3,9 @@
     "title": "Mohamed Khalil Brik — Développement web & e-commerce",
     "description": "Développeur web freelance, sites et boutiques en ligne rapides et audacieux."
   },
+  "whatsapp": {
+    "label": "Discuter sur WhatsApp"
+  },
   "nav": {
     "work": "Travaux",
     "services": "Services",
@@ -16,13 +19,15 @@
     "thesis": "Développement web et boutiques en ligne, conçus pour durer.",
     "scrollCue": "Entrer dans la galerie",
     "viewWork": "Voir mes projets",
-    "portraitPlaceholder": "Ce cadre est réservé à un portrait — bientôt disponible."
+    "credential": "Double master en ingénierie informatique — Erasmus Mundus"
   },
   "portfolio": {
     "heading": "Projets sélectionnés",
     "placeholderTitle": "Titre du projet",
     "placeholderDescription": "Ce cadre est réservé à un futur projet — bientôt disponible.",
     "viewProject": "Voir le site en ligne",
+    "previousImage": "Image précédente",
+    "nextImage": "Image suivante",
     "meta": {
       "role": "Rôle",
       "stack": "Technologies",
@@ -38,6 +43,22 @@
     "ecommerce": {
       "title": "E-commerce",
       "description": "Des boutiques en ligne qui donnent envie de parcourir, de faire confiance et d'acheter."
+    },
+    "accounting": {
+      "title": "Logiciels de comptabilité",
+      "description": "Des outils de comptabilité et de facturation sur mesure, adaptés à votre façon de travailler."
+    },
+    "aiAutomation": {
+      "title": "Automatisations IA",
+      "description": "Des automatisations basées sur l'IA qui suppriment les tâches répétitives — de la saisie de données aux réponses clients."
+    },
+    "crm": {
+      "title": "Systèmes CRM",
+      "description": "Des CRM sur mesure pour suivre prospects, clients et opportunités au même endroit."
+    },
+    "hr": {
+      "title": "Systèmes RH",
+      "description": "Des outils RH et de gestion d'équipe pour les plannings, les dossiers et les processus internes."
     }
   },
   "pricing": {
@@ -105,7 +126,10 @@
       "name": "Nom",
       "email": "E-mail",
       "message": "Message",
-      "send": "Envoyer"
+      "send": "Envoyer",
+      "sending": "Envoi en cours…",
+      "success": "Merci — je vous répondrai très vite.",
+      "error": "Un problème est survenu lors de l'envoi — contactez-moi directement par e-mail."
     }
   },
   "footer": {

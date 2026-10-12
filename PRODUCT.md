@@ -29,7 +29,7 @@ Visitors arrive evaluating whether to hire a freelancer for a new site, an e-com
 ## Capabilities and Constraints
 
 - Must support English, French, and Italian (confirmed constraint) — needs a real language switcher, not copy translated as an afterthought.
-- Services offered: web development (custom sites) and e-commerce sites.
+- Services offered: web development (custom sites), e-commerce sites, accounting software, AI automations, CRM systems, and HR systems.
 - Contact path: contact form with email delivery, plus a Calendly booking link (user already has one, URL not yet supplied).
 - Hosting: Vercel free tier, no custom domain yet.
 

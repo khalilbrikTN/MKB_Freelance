@@ -8,6 +8,7 @@ import { About } from "@/components/About";
 import { Guestbook } from "@/components/Guestbook";
 import { Footer } from "@/components/Footer";
 import { ScrollAccentWatcher } from "@/components/ScrollAccentWatcher";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default async function Home() {
   const tNav = await getTranslations("nav");
@@ -18,6 +19,7 @@ export default async function Home() {
   const tAbout = await getTranslations("about");
   const tGuestbook = await getTranslations("guestbook");
   const tFooter = await getTranslations("footer");
+  const tWhatsapp = await getTranslations("whatsapp");
 
   return (
     <>
@@ -40,7 +42,7 @@ export default async function Home() {
           bookCallLabel={tGuestbook("bookCall")}
           bookCallNote={tGuestbook("bookCallNote")}
           viewWorkLabel={tHero("viewWork")}
-          portraitPlaceholder={tHero("portraitPlaceholder")}
+          credential={tHero("credential")}
         />
         <Portfolio
           heading={tPortfolio("heading")}
@@ -50,6 +52,8 @@ export default async function Home() {
           stackLabel={tPortfolio("meta.stack")}
           yearLabel={tPortfolio("meta.year")}
           viewLabel={tPortfolio("viewProject")}
+          prevLabel={tPortfolio("previousImage")}
+          nextLabel={tPortfolio("nextImage")}
         />
         <Services
           heading={tServices("heading")}
@@ -61,6 +65,22 @@ export default async function Home() {
             {
               title: tServices("ecommerce.title"),
               description: tServices("ecommerce.description"),
+            },
+            {
+              title: tServices("accounting.title"),
+              description: tServices("accounting.description"),
+            },
+            {
+              title: tServices("aiAutomation.title"),
+              description: tServices("aiAutomation.description"),
+            },
+            {
+              title: tServices("crm.title"),
+              description: tServices("crm.description"),
+            },
+            {
+              title: tServices("hr.title"),
+              description: tServices("hr.description"),
             },
           ]}
         />
@@ -108,8 +128,12 @@ export default async function Home() {
         emailLabel={tGuestbook("form.email")}
         messageLabel={tGuestbook("form.message")}
         sendLabel={tGuestbook("form.send")}
+        sendingLabel={tGuestbook("form.sending")}
+        successMessage={tGuestbook("form.success")}
+        errorMessage={tGuestbook("form.error")}
       />
       <Footer rights={tFooter("rights")} />
+      <WhatsAppButton label={tWhatsapp("label")} />
     </>
   );
 }
